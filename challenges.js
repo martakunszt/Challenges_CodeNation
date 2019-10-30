@@ -1,79 +1,87 @@
-/*Create a fruit machine function called Spin that returns three fruits*/
+/* CHALLENGE*/
 
-/*one = "Strawberry"
-two = "Blackberry"
-three = "Raspberry"
+pizzaTop = "ham"
 
-const Spin=()=>{
-return one, two, three;
-}
-console.log(Spin)
-*/
-
-
-/*Challenge 9
-Given a string rearrange the letters into alphabetical order */
-
-str = "Abba is cool"
-
-const sort =(str)=>{
-    arr = str.split(''); /*splits word*/
-    sorted = arr.sort(); /*this method sorts letters*/
-    return sorted.join('');/*this one joins them together into one word*/
-}
-console.log(sort(str))
-
-/*Challenge 14
-Write a function that takes in a word and mimics a mexican wave. Hello hEllo heLlo etc
-*/
-
-str = "Scrumdiddlyumptious"
-
-const wave=(str)=>{
-    result = [];
-    for (i = 0; i < str.length; i++){
-        if (str[i] !=' ')
-
-        result.push(str.slice(0,i) + str[i].toUpperCase() +str.slice(i +1)) 
-
-    }
-    return result
-}
-console.log(wave(str));
-
-/*Challenge 4
-You will set an array containing a number of colours for example ["red", "blue","red","blue"]
-These represent coloured gloves in a drawer. 
-Create a function called getPAirs that takes in this array and returns the number of possible
-pairs of gloves*/
-
-gloves=["purple","purple","jade", "jade", "burgundy", "burgundy"]
-
-getPairs=(gloves)=>{
-
+switch(pizzaTop){
+    case "chesnut mushrooms":
+    case "green bell pepper":
+    case "corn":
+        console.log("These are important ingredients for my pizza");
+        break;
+        case "ham":
+        case "tomatoes":
+        case "onions":
+            console.log(`I don't mind having ${pizzaTop} on my pizza`);
+            break;
+            default:
+                console.log(`${pizzaTop} shouldn't be on my pizza`)
 }
 
-/*Challenge 7
-Create a function that returns True or False based on i a number inputted into it, is prime or not*/
+/*Challenge 1 */
+password ="4"
+
+if(password.length > 8){
+    console.log(password)
+}
+else {
+    console.log("Password is too short")
+}
+
+/*Challenge 2*/
 
 num = 4
 
-const isPrime=(num)=>{
-    for(var i=2; i< num; i++)
-    if(num % i === 0) return false;
-    return num>1;
+if(num % 3 == 0 || num % 5 == 0){
+    console.log("This number is divisible by 3 or 5")
 }
-console.log(isPrime(num))
-
-/*Challenge 3 SoftwareUpdate*/
-
-str = "1.3.2."
-update = str.split('.').reverse()
-
-const softUp=(str)=>{
-for{
-    return 
+else{
+    console.log("This number is not divisible by 3 or 5")
 }
 
+/*Challnge 3*/
+
+num = 20
+
+if(num % 3 == 0 && num % 5 == 0){
+console.log("fizz buzz")
 }
-console.log(softUp(str))
+else if(num % 5 == 0 ){
+console.log("buzz")
+}
+else if(num % 3 == 0){
+console.log("fizz")
+}
+else{
+    console.log(num)
+}
+
+/*Challenge 4*/
+num ="20202"
+
+num = num.toString()
+let newNum = num.split("").reverse().join("")
+
+
+if(num == newNum){
+    console.log("Palindrome")
+}
+else{
+    console.log("Not a palindrome")
+}
+/*Challenge 5*/
+time = "9 o'clock"
+placeOfWork = "Milton"
+townOfHome = "Cambridge"
+
+if(time == "7 o'clock"){
+    console.log(`At ${time} I'm at home in ${townOfHome}`)
+}
+else if(time == "8 o'clock"){
+    console.log(`At ${time} I'm commuting to ${placeOfWork}`)
+}
+else{
+    console.log("I'm at work")
+}
+
+/* CHALLENGE 6*/
+str = "jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi"
